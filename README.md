@@ -1,5 +1,7 @@
 # Aether Vault — Enterprise AI Security Landing Page
 
+![image](images/ss1.png)
+
 A premium, glassmorphism-driven marketing site for **Aether Vault**, an enterprise platform that secures AI workflows with policy enforcement, data protection, and audit-ready compliance.
 
 Built as a high-conversion B2B landing page with strong visual hierarchy, modern motion, and accessibility-conscious interaction patterns.
