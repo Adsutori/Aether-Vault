@@ -3,21 +3,21 @@
   const navToggle = document.getElementById("nav-toggle");
   const navMenu = document.getElementById("nav-menu");
   const featureCards = document.querySelectorAll(".feature-card");
-  const parallaxEl = document.querySelector("[data-parallax]");
+  const heroBg = document.querySelector(".hero-bg");
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  // Sticky header scroll state
-  const onScroll = () => {
-    if (window.scrollY > 16) {
+  // Sticky navbar scroll state
+  const handleScroll = () => {
+    if (window.scrollY > 18) {
       header.classList.add("is-scrolled");
     } else {
       header.classList.remove("is-scrolled");
     }
   };
-  onScroll();
-  window.addEventListener("scroll", onScroll, { passive: true });
+  handleScroll();
+  window.addEventListener("scroll", handleScroll, { passive: true });
 
-  // Mobile menu toggle
+  // Mobile nav
   if (navToggle && navMenu) {
     navToggle.addEventListener("click", () => {
       const expanded = navToggle.getAttribute("aria-expanded") === "true";
@@ -35,9 +35,8 @@
     document.addEventListener("click", (event) => {
       const target = event.target;
       if (!(target instanceof Element)) return;
-      const clickedInsideMenu = navMenu.contains(target) || navToggle.contains(target);
-
-      if (!clickedInsideMenu && navMenu.classList.contains("is-open")) {
+      const inside = navMenu.contains(target) || navToggle.contains(target);
+      if (!inside && navMenu.classList.contains("is-open")) {
         navMenu.classList.remove("is-open");
         navToggle.setAttribute("aria-expanded", "false");
       }
@@ -45,9 +44,9 @@
   }
 
   // Reveal on scroll
-  const revealElements = document.querySelectorAll(".reveal");
+  const revealEls = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window) {
-    const revealObserver = new IntersectionObserver(
+    const io = new IntersectionObserver(
       (entries, observer) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
@@ -58,48 +57,46 @@
       },
       { threshold: 0.16, rootMargin: "0px 0px -8% 0px" }
     );
-
-    revealElements.forEach((el) => revealObserver.observe(el));
+    revealEls.forEach((el) => io.observe(el));
   } else {
-    revealElements.forEach((el) => el.classList.add("is-visible"));
+    revealEls.forEach((el) => el.classList.add("is-visible"));
   }
 
-  // Subtle hero parallax
-  if (!prefersReducedMotion && parallaxEl) {
-    let rafId = null;
-    let targetX = 0;
-    let targetY = 0;
-    let currentX = 0;
-    let currentY = 0;
+  // Subtle hero background movement (very light)
+  if (!prefersReducedMotion && heroBg) {
+    let raf = null;
+    let tx = 0;
+    let ty = 0;
+    let cx = 0;
+    let cy = 0;
 
     const animate = () => {
-      currentX += (targetX - currentX) * 0.08;
-      currentY += (targetY - currentY) * 0.08;
-      parallaxEl.style.transform = `translate3d(${currentX}px, ${currentY}px, 0)`;
+      cx += (tx - cx) * 0.06;
+      cy += (ty - cy) * 0.06;
+      heroBg.style.transform = `translate3d(${cx}px, ${cy}px, 0) scale(1.01)`;
 
-      if (Math.abs(targetX - currentX) > 0.02 || Math.abs(targetY - currentY) > 0.02) {
-        rafId = requestAnimationFrame(animate);
+      if (Math.abs(tx - cx) > 0.03 || Math.abs(ty - cy) > 0.03) {
+        raf = requestAnimationFrame(animate);
       } else {
-        rafId = null;
+        raf = null;
       }
     };
 
     window.addEventListener(
       "pointermove",
       (e) => {
-        const { innerWidth, innerHeight } = window;
-        const x = (e.clientX / innerWidth - 0.5) * 10;
-        const y = (e.clientY / innerHeight - 0.5) * 10;
-        targetX = x;
-        targetY = y;
+        const xNorm = e.clientX / window.innerWidth - 0.5;
+        const yNorm = e.clientY / window.innerHeight - 0.5;
+        tx = xNorm * -8;
+        ty = yNorm * -8;
 
-        if (!rafId) rafId = requestAnimationFrame(animate);
+        if (!raf) raf = requestAnimationFrame(animate);
       },
       { passive: true }
     );
   }
 
-  // Feature card gloss hover position
+  // Feature card gloss tracking
   featureCards.forEach((card) => {
     card.addEventListener("pointermove", (e) => {
       const rect = card.getBoundingClientRect();
@@ -108,7 +105,7 @@
     });
   });
 
-  // Accessible FAQ accordion (single-open optional behavior)
+  // FAQ single-open behavior
   const faqItems = Array.from(document.querySelectorAll(".faq-item"));
   faqItems.forEach((item) => {
     item.addEventListener("toggle", () => {
