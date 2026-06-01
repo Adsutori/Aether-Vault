@@ -1,30 +1,44 @@
 <!doctype html>
-<html lang="pl">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Przestrzeń Marki — Landing premium: prostota z osobowością</title>
+    <title>Aether Vault — Secure Every AI Interaction</title>
     <meta
       name="description"
-      content="Landing page premium dla marek tech B2B/B2C. Łączymy prostotę z charakterem, by zwiększać rozpoznawalność i konwersję."
+      content="Aether Vault is the AI security and compliance layer for modern teams. Control prompts, prevent data leakage, enforce policies, and ship faster with confidence."
     />
-    <meta name="theme-color" content="#0a0a12" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta name="theme-color" content="#0c1430" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <a class="skip-link" href="#main-content">Przejdź do treści</a>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="cursor-glow" aria-hidden="true"></div>
 
-    <header class="site-header" id="site-header">
-      <nav class="nav container" aria-label="Główna nawigacja">
-        <a class="brand" href="#hero" aria-label="Przestrzeń Marki — strona główna">
-          <span class="brand-mark" aria-hidden="true"></span>
-          <span class="brand-text">Przestrzeń Marki</span>
+    <!-- Hero top nav (light links at start) -->
+    <header class="hero-top" aria-label="Hero navigation">
+      <div class="hero-top-inner">
+        <a class="hero-brand" href="#hero" aria-label="Aether Vault home">
+          Aether Vault
+        </a>
+        <nav class="hero-links" aria-label="Quick links">
+          <a href="#platform">Platform</a>
+          <a href="#capabilities">Capabilities</a>
+          <a href="#compliance">Compliance</a>
+          <a href="#final-cta">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Floating island nav (appears after scroll) -->
+    <header class="site-header" id="site-header" aria-hidden="true">
+      <nav class="nav container" aria-label="Primary navigation">
+        <a class="brand" href="#hero" aria-label="Aether Vault homepage">
+          <span style="margin-left: 10px;">Aether Vault</span>
         </a>
 
         <button
@@ -33,241 +47,280 @@
           type="button"
           aria-expanded="false"
           aria-controls="nav-menu"
-          aria-label="Otwórz menu nawigacji"
+          aria-label="Open menu"
         >
-          <span></span>
-          <span></span>
+          <span></span><span></span>
         </button>
 
         <ul class="nav-menu" id="nav-menu">
-          <li><a href="#problem">Problem</a></li>
-          <li><a href="#solution">Rozwiązanie</a></li>
-          <li><a href="#proof">Social proof</a></li>
+          <li><a href="#platform">Platform</a></li>
+          <li><a href="#capabilities">Capabilities</a></li>
+          <li><a href="#integrations">Integrations</a></li>
+          <li><a href="#compliance">Compliance</a></li>
           <li><a href="#faq">FAQ</a></li>
-          <li><a class="nav-cta" href="#final-cta">Umów rozmowę</a></li>
+          <li><a class="nav-cta magnetic" href="#final-cta">Book demo</a></li>
         </ul>
       </nav>
     </header>
 
     <main id="main-content">
-      <section class="hero section" id="hero" aria-labelledby="hero-title">
-        <div class="hero-bg" aria-hidden="true"></div>
-        <div class="hero-vignette" aria-hidden="true"></div>
-        <div class="hero-orbit hero-orbit-a" aria-hidden="true"></div>
-        <div class="hero-orbit hero-orbit-b" aria-hidden="true"></div>
+      <!-- HERO: keep structure, change copy -->
+      <section class="hero" id="hero" aria-labelledby="hero-title">
+        <div class="hero-bg layer" data-depth="0.06" aria-hidden="true"></div>
+        <div class="hero-gradient layer" data-depth="0.02" aria-hidden="true"></div>
+        <div class="liquid-blob blob-a layer" data-depth="0.12" aria-hidden="true"></div>
+        <div class="liquid-blob blob-b layer" data-depth="0.10" aria-hidden="true"></div>
+        <div class="grain" aria-hidden="true"></div>
 
-        <div class="container hero-wrap">
-          <div class="hero-panel reveal">
-            <p class="eyebrow">Expressive Minimalism / Liquid Depth</p>
+        <div class="hero-center">
+          <div class="hero-glass reveal tilt">
+            <p class="hero-sub">AI SECURITY LAYER FOR MODERN TEAMS</p>
             <h1 id="hero-title">
-              Prostota ma porządkować przekaz.
-              <span>Osobowość ma go zapamiętać.</span>
+              Every AI prompt.
+              <span>Fully controlled.</span>
             </h1>
-
-            <p class="lead">
-              Gdy wszyscy wyglądają „nowocześnie”, różnicę robi charakter.
-              Projektujemy landingi dla marek tech, które chcą być czytelne,
-              wyraziste i skuteczne sprzedażowo — jednocześnie.
+            <p class="hero-sub">
+              Aether Vault secures enterprise AI workflows with policy enforcement,
+              sensitive data protection, and audit-ready compliance — without slowing teams down.
             </p>
-
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#final-cta">Zamów landing v2</a>
-              <a class="btn btn-ghost" href="#solution">Zobacz podejście</a>
+              <a class="btn btn-primary magnetic" href="#final-cta">Book live demo</a>
+              <a class="btn btn-ghost magnetic" href="#platform">See platform</a>
             </div>
           </div>
-
-          <aside class="hero-float reveal" aria-label="Najważniejsze wyniki">
-            <ul class="kpi-list">
-              <li>
-                <strong>+37%</strong>
-                <span>CTR głównego CTA</span>
-              </li>
-              <li>
-                <strong>+28%</strong>
-                <span>średni czas zaangażowania</span>
-              </li>
-              <li>
-                <strong>4 tyg.</strong>
-                <span>od strategii do wdrożenia</span>
-              </li>
-            </ul>
-          </aside>
         </div>
       </section>
 
-      <section class="section section-problem" id="problem" aria-labelledby="problem-title">
-        <div class="container">
-          <div class="section-head reveal">
-            <p class="eyebrow">Problem rynkowy</p>
-            <h2 id="problem-title">Generyczny flat design coraz słabiej pracuje na wynik.</h2>
-            <p>
-              Minimalizm sam w sobie przestał być przewagą. Marki upodobniły się do siebie,
-              więc maleje zapamiętywalność, trudniej uzasadnić premium i rośnie koszt uwagi użytkownika.
-            </p>
-          </div>
-
-          <div class="problem-grid">
-            <article class="glass-card reveal">
-              <h3>Wizualna zamienność</h3>
-              <p>Jeśli każdy wygląda podobnie, klient porównuje głównie ceną.</p>
-            </article>
-            <article class="glass-card reveal">
-              <h3>Słabsza pamięć marki</h3>
-              <p>Brak detali i charakterystycznych akcentów osłabia efekt „brand recall”.</p>
-            </article>
-            <article class="glass-card reveal">
-              <h3>Niższa siła CTA</h3>
-              <p>Płaska hierarchia trudniej prowadzi wzrok do decyzji zakupowej.</p>
-            </article>
-          </div>
+      <!-- Platform intro -->
+      <section class="section" id="platform" aria-labelledby="platform-title">
+        <div class="container narrow">
+          <p class="eyebrow reveal">Platform</p>
+          <h2 id="platform-title" class="reveal split-heading">
+            <span class="split-heading-main">Adopt AI faster</span>
+            <span class="split-heading-sub">without compromising security, privacy, or compliance.</span>
+          </h2>
+          <p class="reveal">
+            Aether Vault sits between your teams and AI tools. We inspect prompts and outputs in real time,
+            redact sensitive content, enforce policies, and generate a complete audit trail for legal and security teams.
+          </p>
         </div>
       </section>
 
-      <section class="section section-solution" id="solution" aria-labelledby="solution-title">
+      <!-- Core capabilities -->
+      <section class="section" id="capabilities" aria-labelledby="capabilities-title">
         <div class="container">
           <div class="section-head reveal">
-            <p class="eyebrow">Rozwiązanie</p>
-            <h2 id="solution-title">Expressive minimalism: balans czytelności i charakteru.</h2>
-            <p>
-              Używamy koloru, głębi, tekstury, typografii i subtelnego ruchu jako narzędzi strategicznych.
-              Nie dla ozdoby — dla lepszej rozpoznawalności i konwersji.
-            </p>
+            <p class="eyebrow">Core capabilities</p>
+            <h2 id="capabilities-title">Built for enterprise AI governance at scale.</h2>
           </div>
 
           <div class="feature-grid">
-            <article class="feature-card reveal"><h3>Detale</h3><p>Mikroakcenty, które budują pamięć marki.</p></article>
-            <article class="feature-card reveal"><h3>Kolor</h3><p>Koduje znaczenie i wzmacnia priorytety CTA.</p></article>
-            <article class="feature-card reveal"><h3>Głębia</h3><p>Warstwy i szkło porządkują uwagę użytkownika.</p></article>
-            <article class="feature-card reveal"><h3>Typografia</h3><p>Mocny głos marki bez utraty czytelności.</p></article>
-            <article class="feature-card reveal"><h3>Nostalgia</h3><p>Subtelny retro-tech vibe zwiększa emocjonalność.</p></article>
-            <article class="feature-card reveal"><h3>Motion</h3><p>Lekki ruch prowadzi wzrok, nie rozprasza.</p></article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-process" id="process" aria-labelledby="process-title">
-        <div class="container">
-          <div class="section-head reveal">
-            <p class="eyebrow">Proces</p>
-            <h2 id="process-title">4 kroki do landingu, który działa i wyróżnia</h2>
-          </div>
-
-          <ol class="process-list">
-            <li class="process-item reveal">
-              <span class="step">1</span>
-              <h3>Strategia przekazu</h3>
-              <p>Precyzujemy cel i logikę konwersji: lead, demo, zakup.</p>
-            </li>
-            <li class="process-item reveal">
-              <span class="step">2</span>
-              <h3>Direction wizualny</h3>
-              <p>Budujemy system: kolor, typografia, głębia, rytm sekcji.</p>
-            </li>
-            <li class="process-item reveal">
-              <span class="step">3</span>
-              <h3>Copy + architektura</h3>
-              <p>Treść prowadzi od problemu do decyzji bez „sekcji zapychaczy”.</p>
-            </li>
-            <li class="process-item reveal">
-              <span class="step">4</span>
-              <h3>Wdrożenie i tuning</h3>
-              <p>Lekki front-end, dostępność, performance i gotowość pod testy A/B.</p>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <section class="section section-proof" id="proof" aria-labelledby="proof-title">
-        <div class="container">
-          <div class="section-head reveal">
-            <p class="eyebrow">Social proof v2</p>
-            <h2 id="proof-title">Efekt to nie tylko „wow”. Efekt to wynik.</h2>
-            <p>
-              Poniżej snapshoty wdrożeń: konkretne liczby, krótki kontekst i benchmark.
-              Zero marketingowej mgły.
-            </p>
-          </div>
-
-          <div class="logo-rail reveal" aria-label="Wybrane typy klientów">
-            <span>SaaS B2B</span>
-            <span>Fintech</span>
-            <span>AI Tools</span>
-            <span>D2C Tech</span>
-            <span>Enterprise</span>
-          </div>
-
-          <div class="proof-layout">
-            <article class="proof-highlight reveal">
-              <h3>Benchmark 90 dni (średnia z wdrożeń)</h3>
-              <ul>
-                <li><strong>+29%</strong><span>CTR głównego CTA</span></li>
-                <li><strong>+26%</strong><span>czas zaangażowania</span></li>
-                <li><strong>+18%</strong><span>współczynnik konwersji</span></li>
-              </ul>
+            <article class="card reveal tilt shimmer">
+              <h3>Prompt Firewall</h3>
+              <p>Block secrets, credentials, and regulated data before they leave your environment.</p>
             </article>
-
-            <article class="proof-case reveal">
-              <p class="case-tag">Case A · SaaS Analytics</p>
-              <h3>From „clean” to „recognizable”</h3>
-              <p>Przebudowa hero i hierarchii sekcji zwiększyła intencję kontaktu sprzedażowego.</p>
-              <div class="case-metrics">
-                <span><strong>+41%</strong> demo requests</span>
-                <span><strong>+22%</strong> MQL → SQL</span>
-              </div>
+            <article class="card reveal tilt shimmer">
+              <h3>Policy Engine</h3>
+              <p>Define rules by team, region, data class, vendor, and model risk profile.</p>
             </article>
-
-            <article class="proof-case reveal">
-              <p class="case-tag">Case B · D2C Premium Device</p>
-              <h3>Więcej charakteru, bez obniżania ceny</h3>
-              <p>Lepszy rytm wizualny i copy skróciły drogę do checkoutu.</p>
-              <div class="case-metrics">
-                <span><strong>+33%</strong> checkout start</span>
-                <span><strong>+18%</strong> conversion rate</span>
-              </div>
+            <article class="card reveal tilt shimmer">
+              <h3>DLP for AI</h3>
+              <p>Mask PII and sensitive fields in real time with deterministic redaction controls.</p>
+            </article>
+            <article class="card reveal tilt shimmer">
+              <h3>Model Routing</h3>
+              <p>Route requests to approved models and providers based on policy and cost controls.</p>
+            </article>
+            <article class="card reveal tilt shimmer">
+              <h3>Audit Trail</h3>
+              <p>Maintain immutable, searchable logs for legal review and incident response.</p>
+            </article>
+            <article class="card reveal tilt shimmer">
+              <h3>Role-based Access</h3>
+              <p>Enforce least privilege with SSO, SCIM, and granular admin permissions.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section section-faq" id="faq" aria-labelledby="faq-title">
+      <!-- Architecture strip -->
+      <section class="section" id="architecture" aria-labelledby="architecture-title">
         <div class="container">
           <div class="section-head reveal">
-            <p class="eyebrow">FAQ</p>
-            <h2 id="faq-title">Najczęściej zadawane pytania</h2>
+            <p class="eyebrow">Architecture</p>
+            <h2 id="architecture-title">A control plane your teams won’t notice — and your CISO will trust.</h2>
           </div>
+
+          <div class="arch-grid">
+            <article class="arch-node reveal">
+              <span>1</span>
+              <h3>Ingress Gateway</h3>
+              <p>Intercepts requests from copilots, chat apps, IDE agents, and internal tools.</p>
+            </article>
+            <article class="arch-node reveal">
+              <span>2</span>
+              <h3>Inspection Layer</h3>
+              <p>Classifies data, detects policy violations, and sanitizes payloads in milliseconds.</p>
+            </article>
+            <article class="arch-node reveal">
+              <span>3</span>
+              <h3>Policy Decision</h3>
+              <p>Allow, redact, block, or reroute based on centralized policy logic.</p>
+            </article>
+            <article class="arch-node reveal">
+              <span>4</span>
+              <h3>Secure Delivery</h3>
+              <p>Returns approved output with audit metadata and compliance evidence.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Integrations -->
+      <section class="section" id="integrations" aria-labelledby="integrations-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Integrations</p>
+            <h2 id="integrations-title">Works with your existing AI stack.</h2>
+          </div>
+
+          <div class="logo-cloud reveal">
+            <span>OpenAI</span>
+            <span>Azure OpenAI</span>
+            <span>AWS Bedrock</span>
+            <span>Anthropic</span>
+            <span>Google Vertex</span>
+            <span>Slack</span>
+            <span>Microsoft Teams</span>
+            <span>Jira</span>
+            <span>Notion</span>
+            <span>GitHub</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Compliance / trust -->
+      <section class="section" id="compliance" aria-labelledby="compliance-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Trust & compliance</p>
+            <h2 id="compliance-title">Security controls that satisfy enterprise procurement.</h2>
+          </div>
+
+          <div class="proof-grid">
+            <article class="card reveal tilt">
+              <h3>Governance Outcomes</h3>
+              <p>Organizations report fewer AI policy violations within the first 45 days.</p>
+              <p><strong>Up to 62% reduction</strong></p>
+            </article>
+            <article class="card reveal tilt">
+              <h3>Compliance Readiness</h3>
+              <p>Exportable evidence for legal, risk, and audit teams.</p>
+              <p><strong>SOC 2 / ISO 27001 / GDPR aligned</strong></p>
+            </article>
+            <article class="card reveal tilt">
+              <h3>Fast Deployment</h3>
+              <p>Deploy with minimal workflow disruption and immediate visibility.</p>
+              <p><strong>Production-ready in under 2 weeks</strong></p>
+            </article>
+          </div>
+
+          <div class="badges reveal" aria-label="Security badges">
+            <span>SOC 2 Type II</span>
+            <span>GDPR Ready</span>
+            <span>SSO + SCIM</span>
+            <span>Encryption at Rest / In Transit</span>
+            <span>RBAC</span>
+            <span>Audit Logs</span>
+          </div>
+        </div>
+      </section>
+
+        <section class="section" id="controls" aria-labelledby="controls-title">
+        <div class="container">
+            <p class="eyebrow reveal">Control index</p>
+            <h2 id="controls-title" class="reveal">Compliance controls mapped to real workflows.</h2>
+            <div class="table-wrap reveal">
+            <table class="control-table">
+                <thead>
+                <tr>
+                    <th>Control Area</th>
+                    <th>Capability</th>
+                    <th>Output Evidence</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Data Protection</td>
+                    <td>Prompt/response redaction (PII, secrets)</td>
+                    <td>Sanitization logs</td>
+                </tr>
+                <tr>
+                    <td>Access Governance</td>
+                    <td>SSO, SCIM, RBAC</td>
+                    <td>Role and auth events</td>
+                </tr>
+                <tr>
+                    <td>Auditability</td>
+                    <td>Immutable event trail</td>
+                    <td>Exportable audit records</td>
+                </tr>
+                <tr>
+                    <td>Policy Enforcement</td>
+                    <td>Rule engine per team/region</td>
+                    <td>Decision logs (allow/block/reroute)</td>
+                </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+        </section>
+
+      <!-- FAQ -->
+      <section class="section" id="faq" aria-labelledby="faq-title">
+        <div class="container narrow">
+          <p class="eyebrow reveal">FAQ</p>
+          <h2 id="faq-title" class="reveal">Frequently asked questions</h2>
 
           <div class="faq-list">
             <details class="faq-item reveal">
-              <summary>Czy odważniejszy design nie obniży czytelności?</summary>
-              <p>Nie. Priorytetem jest hierarchia treści i konwersja. Ekspresja jest kontrolowana i wspierająca przekaz.</p>
+              <summary>Will this impact model response quality or latency?</summary>
+              <p>
+                Aether Vault is designed for low-latency policy decisions and selective redaction.
+                Most teams see negligible impact while gaining significantly stronger control.
+              </p>
             </details>
             <details class="faq-item reveal">
-              <summary>Czy da się to wdrożyć na obecnym brandzie?</summary>
-              <p>Tak. Wzmacniamy to, co już działa, dodając detale i rytm wizualny zwiększający rozpoznawalność.</p>
+              <summary>Can we apply different rules by department or geography?</summary>
+              <p>
+                Yes. Policy scopes can be configured by team, business unit, region, data type, and tool.
+              </p>
             </details>
             <details class="faq-item reveal">
-              <summary>Ile trwa realizacja v2?</summary>
-              <p>Najczęściej 3–4 tygodnie od kick-off do gotowego wdrożenia.</p>
-            </details>
-            <details class="faq-item reveal">
-              <summary>Czy kod jest produkcyjny?</summary>
-              <p>Tak — semantyczny HTML, modularny CSS, lekki JS, bez framework lock-in.</p>
+              <summary>Do you support cloud and hybrid deployment models?</summary>
+              <p>
+                Yes. We support managed cloud and hybrid architectures based on your compliance requirements.
+              </p>
             </details>
           </div>
         </div>
       </section>
 
-      <section class="section section-final-cta" id="final-cta" aria-labelledby="cta-title">
+      <!-- Final CTA -->
+      <section class="section final" id="final-cta" aria-labelledby="cta-title">
         <div class="container">
-          <div class="final-cta-card reveal">
-            <p class="eyebrow">Decyzja, która robi różnicę</p>
-            <h2 id="cta-title">Zamiast „ładnie jak wszyscy” — „rozpoznawalnie jak Wy”.</h2>
+          <div class="final-card reveal tilt shimmer">
+            <!-- <p class="eyebrow">Final call</p> -->
+            <h2 id="cta-title">
+                Secure every AI interaction
+                <span>before risk reaches production.</span>
+            </h2>
             <p>
-              Dostajesz landing, który łączy prostotę z charakterem i realnie wspiera cele sprzedażowe.
+              Book a 30-minute architecture session and get a deployment blueprint tailored to your stack.
             </p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#hero">Start projektu</a>
-              <a class="btn btn-ghost" href="#process">Jak pracujemy</a>
+              <a class="btn btn-primary magnetic" href="#hero">Book enterprise demo</a>
+              <a class="btn btn-ghost magnetic" href="#platform">Review capabilities</a>
             </div>
           </div>
         </div>
@@ -276,8 +329,8 @@
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <p>© 2026 Przestrzeń Marki · Design, Front-end, Conversion Copy</p>
-        <a href="#hero" aria-label="Przejdź na górę">Do góry ↑</a>
+        <p>© 2026 Krzysztof Januszewski</p>
+        <a href="#hero">Back to top ↑</a>
       </div>
     </footer>
 
