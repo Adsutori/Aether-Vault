@@ -4,15 +4,18 @@
 
 ---
 
-A premium, glassmorphism-driven marketing site for **Aether Vault**, an enterprise platform that secures AI workflows with policy enforcement, data protection, and audit-ready compliance.
+> **Portfolio project / design concept**  
+> This repository is a fictional B2B product marketing concept created for portfolio purposes to showcase UI, branding, motion, and front-end implementation skills.
 
-Built as a high-conversion B2B landing page with strong visual hierarchy, modern motion, and accessibility-conscious interaction patterns.
+A premium, glassmorphism-driven marketing site for **Aether Vault**, a concept enterprise platform focused on securing AI workflows with policy enforcement, data protection, and audit-ready compliance.
+
+Built as a high-conversion B2B-style landing page with strong visual hierarchy, modern motion, and accessibility-conscious interaction patterns.
 
 ---
 
 ## Overview
 
-**Aether Vault** is presented as the security layer between teams and LLM tools.  
+**Aether Vault** is presented as a security layer between teams and LLM tools.  
 The page communicates product value through:
 
 - clear enterprise messaging,
@@ -65,5 +68,3 @@ This project focuses on combining **brand-level visual design** with practical U
 - **CSS3** (custom properties, glassmorphism, responsive layout)
 - **Vanilla JavaScript** (no framework)
 - Optional local font assets (Clash Display variable font)
-
----
