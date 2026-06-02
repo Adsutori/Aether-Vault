@@ -13,6 +13,9 @@ Built as a high-conversion B2B-style landing page with strong visual hierarchy, 
 
 ---
 
+## Live preview
+🔗 https://aether-vault-livid.vercel.app/
+
 ## Overview
 
 **Aether Vault** is presented as a security layer between teams and LLM tools.  
